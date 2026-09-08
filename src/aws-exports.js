@@ -6,7 +6,7 @@ const awsmobile = {
     "aws_cloud_logic_custom": [
         {
             "name": "apolloapi",
-            "endpoint": "https://z5x6mrtyzg.execute-api.us-east-1.amazonaws.com/dev",
+            "endpoint": "https://9f0jkwl99i.execute-api.us-east-1.amazonaws.com/staging",
             "region": "us-east-1"
         }
     ]

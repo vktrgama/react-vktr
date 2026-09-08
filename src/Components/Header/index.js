@@ -1,14 +1,14 @@
 import Splash from "../Header/Splash";
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import Navigation from './nav';
 
 function Header() {
-    const location = useLocation();
-    let showSplash = location.pathname === "/" && <Splash />;
+    // const location = useLocation();
+    // let showSplash = location.pathname === "/" && <Splash />;
 
     return (
         <header id="header" class="header">
-            {showSplash}
+            <Splash />
             <div id="stuck_container" class="stuck_container">
                 <div class="container">
                     <div class="row">

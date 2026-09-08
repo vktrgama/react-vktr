@@ -169,24 +169,6 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
 $(document).ready(function () {
     var obj;
 
-    if ((obj = $('#camera')).length > 0) {
-        obj.camera({
-            autoAdvance: true,
-            height: '46.67%',
-            minHeight: '280px',
-            pagination: true,
-            thumbnails: false,
-            playPause: false,
-            hover: false,
-            loader: 'none',
-            navigation: false,
-            navigationHover: false,
-            mobileNavHover: false,
-            fx: 'simpleFade',
-            
-        })
-    }
-
     if ((obj = $('#owl')).length > 0) {
         obj.owlCarousel({
             navigation: false,

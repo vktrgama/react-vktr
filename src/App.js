@@ -1,12 +1,12 @@
 import './App.css';
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter,
+  Routes,
   Route
 } from "react-router-dom";
 import Home from './Components/Home';
-import Dashboard from './Components/Dashboard';
+import Dashboard from './Components/Projects';
 import Projects from './Components/Projects';
 import About from './Components/About';
 import Header from './Components/Header'
@@ -18,25 +18,17 @@ function App() {
   
   return (
     <div class="page">
-      <Router>
+      <BrowserRouter>
           <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
           <Header />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard user={user} />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-          </Switch>
+          <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/dashboard" element={<Dashboard user={user}/>} />
+              <Route path="/projects" element={ <Projects />} />
+          </Routes>
           <Footer />
-      </Router>
+        </BrowserRouter>
     </div>
   );
 }
