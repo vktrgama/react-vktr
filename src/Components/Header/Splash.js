@@ -8,12 +8,12 @@ const slides = [
   {
     image: 'images/index_slide01.jpg',
     title: 'Victor Gama',
-    subtitle: 'Staff Software Engineer',
+    subtitle: 'Staff Software Engineer / Engineering Manager',
   },
   {
     image: 'images/index_slide02.jpg',
     title: 'Full Stack',
-    subtitle: 'Engineering',
+    subtitle: 'AWS/Cloud/GCP',
   },
 ];
 
@@ -44,7 +44,7 @@ function Splash() {
                 <h2 class="hero__title">{slide.title}</h2>
                 <p class="hero__subtitle">{slide.subtitle}</p>
                 <div class="hero__cta">
-                  <NavLink class="btn1" to="/about">more info</NavLink>
+                  <NavLink className="btn1" to="/about">more info</NavLink>
                 </div>
               </div>
             </div>
