@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -18,7 +18,7 @@ function App() {
   
   return (
     <div class="page">
-      <BrowserRouter>
+      <HashRouter>
           <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
           <Header />
           <Routes>
@@ -28,7 +28,7 @@ function App() {
               <Route path="/projects" element={ <Projects />} />
           </Routes>
           <Footer />
-        </BrowserRouter>
+        </HashRouter>
     </div>
   );
 }
