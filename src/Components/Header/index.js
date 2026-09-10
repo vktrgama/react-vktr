@@ -25,7 +25,7 @@ function Header() {
                     <div class="row">
                         <div class="grid_12">
                             <div class="hdr-brand">
-                                <h1><a href="./">Full Stack Engineering</a></h1>
+                                <h1><a href="./">Victor Gama - Technology Enthusiast</a></h1>
                             </div>
                             <Navigation />
                         </div>

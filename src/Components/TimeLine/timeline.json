@@ -2,6 +2,13 @@
    "data": {
       "event": [
          {
+            "start": "1996",
+            "end": "1999",
+            "isDuration": "true",
+            "title": "Mexico City",
+            "text": "GBM Casa de Bolsa, CitiBank, Seguros Monterrey, Bancomer"
+         },
+         {
             "start": "1999",
             "latestStart": "Mar 17 1999",
             "earliestEnd": "May 21 2000",
@@ -137,10 +144,17 @@
          },
          {
             "start": "2021",
-            "end": "now",
+            "end": "May 2024",
             "title": "ViacomCBS Streaming (PlutoTV)",
             "color": "Red",
             "text": "Lead Software Engineer, Participate in the design and architecture of modules for a software as a service solution, in NodeJs, Typescript, Postgresql, and AWS lambdas. Coding in our current solution to generate programming feeds for a wide range of partners and media devices, as well as our new and improved feeds-as-a-service solution, NodeJs, MongoDB, Typescript, Postgresql, and AWS. "
+         },
+         {
+            "start": "May 2024",
+            "end": "now",
+            "title": "Paramount+ Streaming",
+            "color": "Red",
+            "text": "Engineering Manager, Ensure Developer team is properly trained be informed of incidents, new features, and organizational teams looing to be production and ahead of the conversation. "
          }
       ]
    }
