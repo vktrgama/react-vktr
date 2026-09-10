@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 import SliderContext from './context'
-import ShowDetailsButton from './ShowDetailsButton'
 import Mark from './Mark'
 import './Item.scss'
 
@@ -20,8 +19,13 @@ const Item = ({ movie }) => (
             'item--open': isActive,
           })}
         >
-          <img src={IMAGE_URI + movie.poster_path} alt="" />
-          <ShowDetailsButton onClick={() => onSelectSlide(movie)} />
+          <button
+            type="button"
+            className="item__poster-button"
+            onClick={() => onSelectSlide(movie)}
+          >
+            <img src={IMAGE_URI + movie.poster_path} alt={movie.original_title || ''} />
+          </button>
           {isActive && <Mark />}
         </div>
       );

@@ -13,6 +13,7 @@ export const MOVIES = gql`
       overview
       vote_average
       poster_path
+      release_date
     }
   }
 `;

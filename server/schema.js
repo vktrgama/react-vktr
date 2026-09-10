@@ -13,6 +13,7 @@ const typeDefs = gql`
     overview: String!
     poster_path: String
     vote_average: Float
+    release_date: String
   }
 `;
 
