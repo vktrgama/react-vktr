@@ -20,7 +20,7 @@ function Projects(props) {
           <div class="row">
               <div class="grid_12">
                   <h2 class="wow fadeInLeft">Personal Projects</h2>
-                  <h3 class="hdng__off3 wow fadeInRight animated">Tech evaluation and other stuff</h3>
+                  <h3 class="hdng__off3 wow fadeInRight animated">Sandbox</h3>
               </div>
           </div>
           
