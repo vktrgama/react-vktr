@@ -1170,7 +1170,7 @@ p + .member_socials, .addr + .member_socials, .terms + .member_socials {
 
 /*==================    Project    ======================*/
 .project_crdts {
-  color: #333;
+  color: #ece4e4;
   line-height: 36px;
 }
 .project_crdts .fa {

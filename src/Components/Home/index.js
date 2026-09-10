@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Reveal from '../Common/Reveal';
 
 function Home() {
     useEffect(() => {
@@ -61,19 +62,19 @@ function Home() {
                 <div class="container well__ins1 well__ins2">
                     <div class="row">
                         <div class="grid_12">
-                            <h2 class="wow fadeInLeft">Latest Projects</h2>
+                            <Reveal as="h2">Latest Projects</Reveal>
                             <p>&nbsp;</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="grid_12">
-                            <h3 class="wow fadeInLeft">Ancestry.com</h3>
+                            <Reveal as="h3" delay={100}>Ancestry.com</Reveal>
                         </div>
                     </div>
                 </div>
                 <div class="container container well__ins2">
                     <div class="row">
-                        <div class="grid_3 wow fadeInUp" data-wow-delay=".2s">
+                        <Reveal as="div" className="grid_3" direction="up" delay={200}>
                             <div class="box center">
                                 <div class="tm-spanner"></div>
                                 <h4><a href="#">Development</a></h4>
@@ -81,8 +82,8 @@ function Home() {
                                 Build and deliver engaging applications for Ancestry customers to explore their Ethnicity and Health via DNA analysis, as well as Historical records, implementing full stack frameworks, including: NodeJS, React, Redux, Jest, Mocha, Webpack, and deployment platforms like Jenkins, Docker, Kubernetes, AWS, and GitHub.
                                 </p>
                             </div>
-                        </div>
-                        <div class="grid_3 wow fadeInUp" data-wow-delay=".4s">
+                        </Reveal>
+                        <Reveal as="div" className="grid_3" direction="up" delay={400}>
                             <div class="box center">
                                 <div class="tm-gear"></div>
                                 <h4><a href="#">Services</a></h4>
@@ -90,8 +91,8 @@ function Home() {
                                 Build backend RESTful services for our solutions and internal clients, well documented. Support my team on several infrastructure migrations (GitHub, Kubernetes, Cloud, Harness).
                                 </p>
                             </div>
-                        </div>
-                        <div class="grid_3 wow fadeInUp" data-wow-delay=".6s">
+                        </Reveal>
+                        <Reveal as="div" className="grid_3" direction="up" delay={600}>
                             <div class="box center">
                                 <div class="tm-user"></div>
                                 <h4><a href="#">Agile</a></h4>
@@ -100,8 +101,8 @@ function Home() {
                                 Close collaboration with other teams implementing internal services as well as integration with our dependencies.
                                 </p>
                             </div>
-                        </div>
-                        <div class="grid_3 wow fadeInUp" data-wow-delay=".8s">
+                        </Reveal>
+                        <Reveal as="div" className="grid_3" direction="up" delay={800}>
                             <div class="box center">
                                 <div class="tm-check"></div>
                                 <h4><a href="#">Production</a></h4>
@@ -109,23 +110,23 @@ function Home() {
                                 Delivered 3 major products in the last 2 years for Ancestry DNA and Ancestry Health domains, high profile customer facing applications.
                                 </p>
                             </div>
-                        </div>
+                        </Reveal>
                     </div>
                 </div>
                 <div class="bg1 well__ins3 well__ins2">
                     <div class="container">
                         <div class="row">
                             <div class="grid_12">
-                                <h2 class="wow fadeInLeft">Recommendations</h2>
+                                <Reveal as="h2">Recommendations</Reveal>
                                 <p>&nbsp;</p>
                             </div>
                             <div class="grid_12">
                                 <div class="img-wrap center">
-                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".4s"><img src="images/craig-tenney.jpeg" alt="Craig Tenney" /></div>
-                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".6s"><img src="images/audrey-vincent.jpeg" alt="Audrey Vincet" /></div>
-                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".2s"><img src="images/robert-schultz.jpeg" alt="Robert Schultz" /></div>
+                                    <Reveal as="div" className="img-cnt mg-add" direction="bounce" delay={400}><img src="images/craig-tenney.jpeg" alt="Craig Tenney" /></Reveal>
+                                    <Reveal as="div" className="img-cnt mg-add" direction="bounce" delay={600}><img src="images/audrey-vincent.jpeg" alt="Audrey Vincet" /></Reveal>
+                                    <Reveal as="div" className="img-cnt mg-add" direction="bounce" delay={200}><img src="images/robert-schultz.jpeg" alt="Robert Schultz" /></Reveal>
                                 </div>
-                                <div id="owl" class="owl wow fadeInUp">
+                                <div id="owl" class="owl reveal reveal--up reveal--visible">
                                     <div class="item">
                                         <blockquote class="quote">
                                             <h4 class="quote_aside"><a href="#">Craig Tenney</a></h4>
