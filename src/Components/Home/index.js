@@ -66,9 +66,9 @@ function Home() {
                             </div>
                             <div class="grid_12">
                                 <div class="img-wrap center">
-                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".4s"><img src="https://media-exp1.licdn.com/dms/image/C5603AQG8T4f86Modlw/profile-displayphoto-shrink_100_100/0/1556501496002?e=1625702400&v=beta&t=gb3RiuOsgSh9Dq8OJd-2A0lCwMx8tZMPAlHO8v29GHo" alt="Craig Tenney" /></div>
-                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".6s"><img src="https://media-exp1.licdn.com/dms/image/C5603AQE2fdFuVJ3AhQ/profile-displayphoto-shrink_100_100/0/1610813218999?e=1625702400&v=beta&t=cimfmYLw5u7_bnovwFtdadEI76jxMeKhfLo40N1Hufs" alt="Audrey Vincet" /></div>
-                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".2s"><img src="https://media-exp1.licdn.com/dms/image/C5603AQEPbYIoEMwEpw/profile-displayphoto-shrink_100_100/0/1607473693611?e=1625702400&v=beta&t=mhLNQMfdxkhCshJTXk0SKWepx8V40vytpOBVWVW_Z-c" alt="Robert Schultz" /></div>
+                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".4s"><img src="images/craig-tenney.jpeg" alt="Craig Tenney" /></div>
+                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".6s"><img src="images/audrey-vincent.jpeg" alt="Audrey Vincet" /></div>
+                                    <div class="img-cnt wow bounceIn mg-add" data-wow-delay=".2s"><img src="images/robert-schultz.jpeg" alt="Robert Schultz" /></div>
                                 </div>
                                 <div id="owl" class="owl wow fadeInUp">
                                     <div class="item">
