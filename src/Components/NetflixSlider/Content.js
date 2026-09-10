@@ -17,6 +17,9 @@ const Content = ({ movie, onClose }) => (
     <div className="content_nf__area">
       <div className="content_nf__area__container">
         <div className="content_nf__title">{movie.original_title}</div>
+        {movie.release_date && (
+          <div className="content_nf__release-date">{movie.release_date}</div>
+        )}
         <div className="content_nf__description">
           {movie.overview}
         </div>
