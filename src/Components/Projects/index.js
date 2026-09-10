@@ -23,13 +23,22 @@ function Projects(props) {
                   <h3 class="hdng__off3 wow fadeInRight animated">Tech evaluation and other stuff</h3>
               </div>
           </div>
+          
           <div class="project">
+            <div class="row">
+                <div class="grid_12">
+                    <div class="row">
+                        <ApolloProvider client={client}>
+                            <NewMovies />
+                        </ApolloProvider>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="grid_12">
                     <div class="project_crdts">
                         <h5>Apollo Graphql</h5>
                         <span class="fa fa-calendar"></span> Date: <time datetime="2021-05-02">May, 02, 2021</time> <br />
-                        <span class="fa fa-user"></span> Client: <a href="#">Sandbox</a> <br />
                         <span class="fa fa-align-left"></span> Skills: <a href="#">graphQL</a>, <a href="#">AWS</a>, <a href="#">React</a>
                     </div> 
                     <p>
@@ -42,15 +51,6 @@ function Projects(props) {
                 </div>
                 <div class="grid_7"></div>
             </div>
-        </div>
-        <div class="row">
-          <div class="grid_12">
-              <div class="row">
-              <ApolloProvider client={client}>
-                  <NewMovies />
-              </ApolloProvider>
-              </div>
-          </div>
       </div>
     </div>
   )
