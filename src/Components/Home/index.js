@@ -1,5 +1,60 @@
+import { useEffect } from 'react';
 
 function Home() {
+    useEffect(() => {
+        const jQuery = window.jQuery;
+        if (!jQuery) {
+            return;
+        }
+
+        const owl = jQuery('#owl');
+        if (owl.length === 0) {
+            return;
+        }
+
+        const imgCnts = jQuery('.img-wrap .img-cnt');
+
+        const syncActiveImage = () => {
+            const data = owl.data('owlCarousel');
+            if (!data) {
+                return;
+            }
+            imgCnts.removeClass('active');
+            imgCnts.eq(data.currentItem).addClass('active');
+        };
+
+        const handleImgClick = function () {
+            const data = owl.data('owlCarousel');
+            if (!data) {
+                return;
+            }
+            data.goTo(imgCnts.index(this));
+        };
+
+        owl.owlCarousel({
+            navigation: false,
+            autoPlay: true,
+            stopOnHover: true,
+            slideSpeed: 300,
+            pagination: false,
+            paginationSpeed: 400,
+            singleItem: true,
+            navigationText: ["", ""],
+            afterInit: syncActiveImage,
+            afterAction: syncActiveImage
+        });
+
+        imgCnts.css('cursor', 'pointer').on('click', handleImgClick);
+
+        return () => {
+            imgCnts.off('click', handleImgClick);
+            const data = owl.data('owlCarousel');
+            if (data) {
+                data.destroy();
+            }
+        };
+    }, []);
+
     return (
         <>
             <section id="content" class="content">

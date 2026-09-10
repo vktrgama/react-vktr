@@ -639,9 +639,18 @@ p + .addr, .addr + .addr, .terms + .addr {
   height: 70px;
   border-radius: 50%;
   overflow: hidden;
+  opacity: 0.5;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 .img-wrap .img-cnt + .img-cnt {
   margin-left: 18px;
+}
+.img-wrap .img-cnt.active {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #0fcabf;
 }
 .img-wrap img {
   position: absolute;
