@@ -2,6 +2,7 @@ import React from 'react';
 import NewMovies from './NewMovies';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'; // GraphQl services from Apollo
 import config from '../../aws-exports';
+import Reveal from '../Common/Reveal';
 
 function Projects(props) {
   
@@ -19,8 +20,8 @@ function Projects(props) {
     <div class="container well">
           <div class="row">
               <div class="grid_12">
-                  <h2 class="wow fadeInLeft">Personal Projects</h2>
-                  <h3 class="hdng__off3 wow fadeInRight animated">Sandbox</h3>
+                  <Reveal as="h2">Personal Projects</Reveal>
+                  <Reveal as="h3" className="hdng__off3" delay={100}>Sandbox</Reveal>
               </div>
           </div>
           

@@ -1,42 +1,234 @@
-.App {
-  text-align: center;
+:root {
+  --ink: #e8eef8;
+  --muted: #9aabc2;
+  --surface: #111c31;
+  --surface-raised: #182640;
+  --border: rgba(170, 190, 220, 0.16);
+  --accent: #8b7cff;
+  --accent-bright: #65d8ff;
+  --page: #08111f;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background: var(--page);
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(101, 216, 255, 0.1), transparent 28rem),
+    radial-gradient(circle at 90% 20%, rgba(139, 124, 255, 0.11), transparent 32rem),
+    var(--page);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
 }
 
-.App-header {
-  background-color: #282c34;
+a {
+  color: var(--accent-bright);
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.page {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  position: relative;
+  z-index: 10;
+}
+
+.stuck_container {
+  position: sticky;
+  top: 0;
+  background: rgba(8, 17, 31, 0.82);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.stuck_container > .container {
+  width: min(1120px, calc(100% - 40px));
+}
+
+.hdr-brand h1 {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: -0.02em;
+}
+
+.hdr-brand a {
+  color: var(--ink);
+}
+
+.nav .sf-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.nav .sf-menu a {
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.55rem 0.9rem;
+  text-transform: uppercase;
+}
+
+.nav .sf-menu a:hover,
+.nav .sf-menu a.active {
+  background: rgba(139, 124, 255, 0.14);
+  color: var(--ink);
+}
+
+.hero {
+  border-radius: 0 0 2rem 2rem;
+}
+
+.hero__slide::after {
+  background: linear-gradient(135deg, rgba(8, 17, 31, 0.82), rgba(8, 17, 31, 0.18) 65%, rgba(101, 216, 255, 0.18));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.hero__caption {
+  z-index: 1;
+}
+
+.hero__title {
+  letter-spacing: -0.06em;
+  text-shadow: 0 10px 32px rgba(0, 0, 0, 0.34);
+}
+
+.hero__subtitle {
+  color: #d4e4f8;
+  font-weight: 500;
+}
+
+.btn1,
+.btn2 {
+  background: linear-gradient(135deg, var(--accent), #5a9dff);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(101, 134, 255, 0.28);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.9rem 1.45rem;
+  text-transform: uppercase;
+}
+
+.btn1:hover,
+.btn2:hover {
+  background: linear-gradient(135deg, #a49aff, #72dfff);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.container.well,
+.container.well__ins1,
+.container.well__ins2 {
+  background: transparent;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 7rem) 20px;
+  width: min(1248px, calc(100% - 40px));
+}
+
+.container h2 {
+  color: var(--ink);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: -0.055em;
+}
+
+.container h3.hdng,
+.container h3.hdng__off3 {
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.8;
+  /* max-width: 890px; */
+}
+
+.project,
+.desc,
+.project_crdts {
+  background: linear-gradient(145deg, rgba(24, 38, 64, 0.92), rgba(17, 28, 49, 0.92));
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.project {
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.project_crdts {
+  box-shadow: none;
+  margin-top: 2rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.project_crdts h5 {
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.footer {
+  background: #060d19;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  padding: 3rem 0;
+}
+
+.footer .container {
+  width: min(1120px, calc(100% - 40px));
+}
+
+.ftr-brand h2 a {
+  color: var(--ink);
 }
 
 .linkedin-logo {
-  width: 90px;
+  opacity: 0.75;
+  max-width: 8%;
+  transition: opacity 180ms ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.linkedin-logo:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .stuck_container > .container {
+    width: calc(100% - 24px);
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav .sf-menu {
+    gap: 0;
+  }
+
+  .nav .sf-menu a {
+    font-size: 0.68rem;
+    padding: 0.45rem 0.55rem;
+  }
+
+  .container.well,
+  .container.well__ins1,
+  .container.well__ins2 {
+    width: calc(100% - 24px);
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
